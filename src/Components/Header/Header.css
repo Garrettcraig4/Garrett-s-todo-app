@@ -3,6 +3,13 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
+  width: 100%;
+  height: 48px;
+
+  background: rgb(0, 0, 0, 0.8);
+}
+.HeaderLinks {
+  color: rgba(255, 255, 255, 0.75);
 }
