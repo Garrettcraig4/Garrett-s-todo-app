@@ -7,12 +7,15 @@ class Cpopup extends Component {
     return (
       <div className="Cpopup">
         <div className="box">
-          <p>Create User Name:</p>
-          <input />
-          <p>Create Password:</p>
-          <input />
-          <p>Password again:</p>
-          <input />
+          <div className="stuffinbox">
+            <p>Create User Name:</p>
+            <input />
+            <p>Create Password:</p>
+            <input />
+
+            <p>Email:</p>
+            <input />
+          </div>
         </div>
       </div>
     );
