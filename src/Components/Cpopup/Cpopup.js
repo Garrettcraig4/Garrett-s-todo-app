@@ -12,7 +12,7 @@ class Cpopup extends Component {
       <div className="Cpopup">
         <div className="box">
           <div className="stuffinbox">
-            <button onClick={() => this.props.toggle()}> cancolse </button>
+            <button onClick={() => this.props.toggle()}> Close </button>
             <h1>New Account</h1>
 
             <p>Create User Name:</p>

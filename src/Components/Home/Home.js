@@ -7,10 +7,25 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Garrett's Todo List Maker!!</h1>
+
         <Link to="/Creator">
           <button>Create A Todo List</button>
         </Link>
         <button>Past Todo Lists</button>
+
+        <div className="des">
+          <h3>Create a todo list and get those tasks done!!!! </h3>
+          <p>
+            With Garrett's Todo List Creator it's easy to get the things you
+            need to do complete{" "}
+          </p>
+          <p>With easy methods to get you motavated </p>
+          <ul>
+            <li>Colors!!</li>
+            <li>Messages</li>
+            <li>and more </li>
+          </ul>
+        </div>
       </div>
     );
   }
