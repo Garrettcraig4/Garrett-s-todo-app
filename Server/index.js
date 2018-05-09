@@ -14,7 +14,11 @@ const port = process.env.port || 3001;
 
 const app = express();
 
-const { SESSION_SECRET } = process.env;
+const { SESSION_SECRET, CONNECTION_STRING } = process.env;
+
+massive(CONNECTION_STRING).then(db => {
+  app.set("db", db);
+});
 
 app.use(json());
 
