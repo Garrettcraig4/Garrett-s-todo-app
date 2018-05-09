@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Cpopup.css";
-
+import axios from "axios";
 class Cpopup extends Component {
   constructor(props) {
     super(props);
+  }
+
+  createuser(user, pass) {
+    axios.post("/api/Createuser", { user, pass }).then(results => {
+      results.data, alert("user was created go log in");
+    });
   }
 
   render() {

@@ -35,6 +35,16 @@ app.use(
   })
 );
 
+app.post(`/api/Createuser`, (req, res) => {
+  req.app
+    .get("db")
+    .Createuser([req.body.user, req.body.pass])
+    .then(response => {
+      res.status(200).json(response);
+    })
+    .catch(err => console.log("Err when createing user", err));
+});
+
 app.listen(port, () => {
   console.log(`server is on the port ${port}`);
 });
