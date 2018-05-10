@@ -13,6 +13,9 @@ class Header extends Component {
         <Link to="/Account">
           <a className="HeaderLinks"> Account </a>
         </Link>
+        <Link to="/History">
+          <a className="HeaderLinks"> History </a>
+        </Link>
       </div>
     );
   }
