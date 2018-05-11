@@ -38,7 +38,7 @@ app.use(
 app.post(`/api/Createuser`, (req, res) => {
   req.app
     .get("db")
-    .Createuser([req.body.user, req.body.pass])
+    .Createuser([req.body.user, req.body.pass, req.body.email])
     .then(response => {
       res.status(200).json(response);
     })

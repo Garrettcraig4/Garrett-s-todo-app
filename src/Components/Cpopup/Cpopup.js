@@ -13,7 +13,7 @@ class Cpopup extends Component {
     };
   }
 
-  createuser(user, pass) {
+  createuser(user, pass, email) {
     axios.post("/api/Createuser", { user, pass }).then(results => {
       results.data, alert("user was created go log in");
     });
