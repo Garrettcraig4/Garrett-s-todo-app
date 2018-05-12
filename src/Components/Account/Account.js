@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Cpopup from "../Cpopup/Cpopup";
+import "./Account.css";
 class Account extends Component {
   constructor(props) {
     super(props);
