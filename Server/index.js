@@ -36,7 +36,6 @@ app.use(
 );
 
 app.post(`/api/Createuser`, (req, res) => {
-  console.log(req.body);
   req.app
     .get("db")
     .Createuser([req.body.user, req.body.pass, req.body.email])
