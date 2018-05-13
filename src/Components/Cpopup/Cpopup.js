@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Cpopup.css";
 import axios from "axios";
+import swal from "sweetalert";
 class Cpopup extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,7 @@ class Cpopup extends Component {
     axios
       .post("http://localhost:3001/api/Createuser", { user, pass, email })
       .then(results => {
-        results.data, alert("user was created go log in");
+        results.data, swal("user was created go log in");
       });
   }
 
