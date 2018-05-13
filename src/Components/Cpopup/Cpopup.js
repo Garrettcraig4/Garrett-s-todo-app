@@ -11,28 +11,34 @@ class Cpopup extends Component {
       userp: "",
       usere: ""
     };
+    this.createuser = this.createuser.bind(this);
+    this.savenewusern = this.savenewusern.bind(this);
+    this.savenewuserp = this.savenewuserp.bind(this);
+    this.savenewusere = this.savenewusere.bind(this);
   }
 
   createuser(user, pass, email) {
-    axios.post("/api/Createuser", { user, pass }).then(results => {
-      results.data, alert("user was created go log in");
-    });
+    axios
+      .post("http://localhost:3001/api/Createuser", { user, pass, email })
+      .then(results => {
+        results.data, alert("user was created go log in");
+      });
   }
 
   savenewusern(usern) {
-    this.setstate({
+    this.setState({
       usern: usern
     });
   }
 
   savenewuserp(userp) {
-    this.setstate({
+    this.setState({
       userp: userp
     });
   }
 
   savenewusere(usere) {
-    this.setstate({
+    this.setState({
       usere: usere
     });
   }
@@ -54,7 +60,17 @@ class Cpopup extends Component {
             <input onChange={e => this.savenewusere(e.target.value)} />
 
             <p>create account</p>
-            <button>Submit</button>
+            <button
+              onClick={() =>
+                this.createuser(
+                  this.state.usern,
+                  this.state.userp,
+                  this.state.usere
+                )
+              }
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

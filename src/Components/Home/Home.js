@@ -9,7 +9,7 @@ class Home extends Component {
         <h1>Garrett's Todo List Maker!!</h1>
 
         <Link to="/Creator">
-          <button>Create A Todo List</button>
+          <button className="button">Create A Todo List</button>
         </Link>
         <button>Past Todo Lists</button>
 
