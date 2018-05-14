@@ -18,6 +18,14 @@ class Cpopup extends Component {
     this.savenewusere = this.savenewusere.bind(this);
   }
 
+  ValidateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    alert("You have entered an invalid email address!");
+    return false;
+  }
+
   createuser(user, pass, email) {
     axios
       .post("http://localhost:3001/api/Createuser", { user, pass, email })
@@ -63,11 +71,13 @@ class Cpopup extends Component {
             <p>create account</p>
             <button
               onClick={() =>
-                this.createuser(
-                  this.state.usern,
-                  this.state.userp,
-                  this.state.usere
-                )
+                this.ValidateEmail(this.state.usere)
+                  ? this.createuser(
+                      this.state.usern,
+                      this.state.userp,
+                      this.state.usere
+                    )
+                  : swal("Not Valid email")
               }
             >
               Submit
