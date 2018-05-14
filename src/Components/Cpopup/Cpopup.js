@@ -22,7 +22,7 @@ class Cpopup extends Component {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
       return true;
     }
-    alert("You have entered an invalid email address!");
+    swal("You have entered an invalid email address!");
     return false;
   }
 
@@ -30,7 +30,7 @@ class Cpopup extends Component {
     axios
       .post("http://localhost:3001/api/Createuser", { user, pass, email })
       .then(results => {
-        results.data, swal("user was created go log in");
+        results.data, swal("user was created go log in"), this.props.toggle();
       });
   }
 
@@ -77,7 +77,7 @@ class Cpopup extends Component {
                       this.state.userp,
                       this.state.usere
                     )
-                  : swal("Not Valid email")
+                  : null
               }
             >
               Submit
