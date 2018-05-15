@@ -29,3 +29,6 @@
   align-items: center;
   height: 100%;
 }
+.red {
+  background-color: red;
+}

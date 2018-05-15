@@ -10,12 +10,14 @@ class Cpopup extends Component {
     this.state = {
       usern: "",
       userp: "",
-      usere: ""
+      usere: "",
+      red: false
     };
     this.createuser = this.createuser.bind(this);
     this.savenewusern = this.savenewusern.bind(this);
     this.savenewuserp = this.savenewuserp.bind(this);
     this.savenewusere = this.savenewusere.bind(this);
+    this.setred = this.setred.bind(this);
   }
 
   ValidateEmail(mail) {
@@ -52,6 +54,12 @@ class Cpopup extends Component {
     });
   }
 
+  setred() {
+    this.setState({
+      red: true
+    });
+  }
+
   render() {
     return (
       <div className="Cpopup">
@@ -66,8 +74,17 @@ class Cpopup extends Component {
             <input onChange={e => this.savenewuserp(e.target.value)} />
 
             <p>Email:</p>
-            <input onChange={e => this.savenewusere(e.target.value)} />
-
+            {this.state.red ? (
+              <input
+                className="red"
+                onChange={e => this.savenewusere(e.target.value)}
+              />
+            ) : (
+              <input
+                className="nored"
+                onChange={e => this.savenewusere(e.target.value)}
+              />
+            )}
             <p>create account</p>
             <button
               onClick={() =>
@@ -77,7 +94,7 @@ class Cpopup extends Component {
                       this.state.userp,
                       this.state.usere
                     )
-                  : null
+                  : this.setred()
               }
             >
               Submit
