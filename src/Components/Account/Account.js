@@ -40,9 +40,9 @@ class Account extends Component {
     axios
       .post("http://localhost:3001/api/login", { email, pass })
       .then(results => {
-        console.log(results.data[0].usernames, "resdata");
-
-        results.data, swal(`Welcome ${results.data[0].usernames}`);
+        !results.data[0] === true
+          ? swal("Email or Password is invalid Please try again.")
+          : swal(`Welcome ${results.data[0].usernames}`);
       });
   }
 

@@ -62,6 +62,7 @@ app.post(`/api/login`, (req, res) => {
       //email comes from HTML page.
       sess.email = req.body.email;
       res.end("done");
+      console.log(sess, "this is req session");
     });
 });
 
