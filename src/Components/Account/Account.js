@@ -63,13 +63,7 @@ class Account extends Component {
         </button>
 
         <button onClick={() => this.click()}>Create Account</button>
-        {this.state.toggle === true ? (
-          <Cpopup
-            toggle={this.click}
-
-            // photoRef={this.props.results.photos[0].photo_reference}
-          />
-        ) : null}
+        {this.state.toggle === true ? <Cpopup toggle={this.click} /> : null}
       </div>
     );
   }
