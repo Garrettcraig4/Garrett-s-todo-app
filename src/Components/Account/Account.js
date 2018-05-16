@@ -53,17 +53,18 @@ class Account extends Component {
         <input onChange={e => this.setusere(e.target.value)} />
         <p>Password:</p>
         <input onChange={e => this.setpass(e.target.value)} />
+        <div>
+          <button
+            onClick={() =>
+              this.checkandgetuser(this.state.email, this.state.pass)
+            }
+          >
+            Login
+          </button>
 
-        <button
-          onClick={() =>
-            this.checkandgetuser(this.state.email, this.state.pass)
-          }
-        >
-          Login
-        </button>
-
-        <button onClick={() => this.click()}>Create Account</button>
-        {this.state.toggle === true ? <Cpopup toggle={this.click} /> : null}
+          <button onClick={() => this.click()}>Create Account</button>
+          {this.state.toggle === true ? <Cpopup toggle={this.click} /> : null}
+        </div>
       </div>
     );
   }

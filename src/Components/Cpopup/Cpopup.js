@@ -66,26 +66,27 @@ class Cpopup extends Component {
         <div className="box">
           <div className="stuffinbox">
             <button onClick={() => this.props.toggle()}> Close </button>
-            <h1>New Account</h1>
+            <div>
+              <h1>New Account</h1>
 
-            <p>Create User Name:</p>
-            <input onChange={e => this.savenewusern(e.target.value)} />
-            <p>Create Password:</p>
-            <input onChange={e => this.savenewuserp(e.target.value)} />
+              <p>Create User Name:</p>
+              <input onChange={e => this.savenewusern(e.target.value)} />
+              <p>Create Password:</p>
+              <input onChange={e => this.savenewuserp(e.target.value)} />
 
-            <p>Email:</p>
-            {this.state.red ? (
-              <input
-                className="red"
-                onChange={e => this.savenewusere(e.target.value)}
-              />
-            ) : (
-              <input
-                className="nored"
-                onChange={e => this.savenewusere(e.target.value)}
-              />
-            )}
-            <p>create account</p>
+              <p>Email:</p>
+              {this.state.red ? (
+                <input
+                  className="red"
+                  onChange={e => this.savenewusere(e.target.value)}
+                />
+              ) : (
+                <input
+                  className="nored"
+                  onChange={e => this.savenewusere(e.target.value)}
+                />
+              )}
+            </div>
             <button
               onClick={() =>
                 this.ValidateEmail(this.state.usere)
@@ -97,7 +98,7 @@ class Cpopup extends Component {
                   : this.setred()
               }
             >
-              Submit
+              Create Account
             </button>
           </div>
         </div>
