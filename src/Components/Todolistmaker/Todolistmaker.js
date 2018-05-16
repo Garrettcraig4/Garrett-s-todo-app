@@ -6,8 +6,7 @@ class Todolistmaker extends Component {
   render() {
     return (
       <div className="Todolistmaker">
-        <p>Name Of Task:</p>
-        <input />
+        <button className="plus"> + </button>
       </div>
     );
   }
