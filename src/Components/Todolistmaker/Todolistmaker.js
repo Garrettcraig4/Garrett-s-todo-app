@@ -3,10 +3,31 @@ import { Link } from "react-router-dom";
 import "./Todolistmaker.css";
 
 class Todolistmaker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      toggler: false
+    };
+    this.clicked = this.clicked.bind(this);
+  }
+
+  clicked() {
+    this.setState({
+      toggler: true
+    });
+  }
+
   render() {
     return (
       <div className="Todolistmaker">
-        <button className="plus"> + </button>
+        <h1>Add new Todo-list!</h1>
+        <button className="plus" onClick={() => clicked()}>
+          {" "}
+          +{" "}
+        </button>
+
+        {(toggler = true ? <Todopopup /> : null)}
       </div>
     );
   }
