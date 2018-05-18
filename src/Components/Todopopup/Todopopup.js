@@ -3,16 +3,19 @@ import { Link } from "react-router-dom";
 import "./Todopopup.css";
 import axios from "axios";
 import swal from "sweetalert";
+import List from "../List/List";
 class Todopopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
       toggled1: false,
-      title: "Your Todo Name"
+      title: "Your Todo Name",
+      toggled2: false
     };
     this.toggled = this.toggled.bind(this);
     this.savetitle = this.savetitle.bind(this);
     this.toggledr = this.toggledr.bind(this);
+    this.newtoggle = this.newtoggle.bind(this);
   }
   toggled() {
     this.setState({
@@ -28,6 +31,12 @@ class Todopopup extends Component {
   savetitle(input) {
     this.setState({
       title: input
+    });
+  }
+
+  newtoggle() {
+    this.setState({
+      toggled2: true
     });
   }
 
@@ -48,7 +57,11 @@ class Todopopup extends Component {
               )}
             </div>
 
-            <button className="plus">+ </button>
+            <button className="plus" onClick={() => this.newtoggle()}>
+              +{" "}
+            </button>
+
+            {this.state.toggled2 ? <List /> : null}
           </div>
         </div>
       </div>
