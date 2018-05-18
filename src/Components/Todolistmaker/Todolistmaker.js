@@ -14,7 +14,7 @@ class Todolistmaker extends Component {
 
   clicked() {
     this.setState({
-      toggler: true
+      toggler: !this.state.toggler
     });
   }
 
@@ -27,7 +27,9 @@ class Todolistmaker extends Component {
           +{" "}
         </button>
 
-        {this.state.toggler == true ? <Todopopup /> : null}
+        {this.state.toggler == true ? (
+          <Todopopup toggler={this.clicked} />
+        ) : null}
       </div>
     );
   }
