@@ -10,7 +10,8 @@ class Todopopup extends Component {
     this.state = {
       toggled1: false,
       title: "Your Todo Name",
-      toggled2: false
+      toggled2: false,
+      useri: 4
     };
     this.toggled = this.toggled.bind(this);
     this.savetitle = this.savetitle.bind(this);
