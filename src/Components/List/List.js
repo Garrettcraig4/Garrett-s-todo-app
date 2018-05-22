@@ -11,8 +11,6 @@ class List extends Component {
         <input />
         <p>Item:</p>
         <input />
-        <p>Item:</p>
-        <input />
       </div>
     );
   }
