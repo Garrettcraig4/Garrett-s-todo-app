@@ -11,6 +11,7 @@ class List extends Component {
         <input />
         <p>Item:</p>
         <input />
+        <button> Done</button>
       </div>
     );
   }

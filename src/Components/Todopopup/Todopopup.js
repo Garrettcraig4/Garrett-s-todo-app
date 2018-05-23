@@ -46,7 +46,7 @@ class Todopopup extends Component {
       <div className="Cpopup">
         <div className="box">
           <div className="stuffinbox">
-            <button onClick={() => this.props.toggler()}>d</button>
+            <button onClick={() => this.props.toggler()}>X</button>
             <div onClick={() => this.toggled()}>
               {this.state.toggled1 ? (
                 <input

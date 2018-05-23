@@ -16,6 +16,7 @@ class Account extends Component {
     this.setusere = this.setusere.bind(this);
     this.setpass = this.setpass.bind(this);
     this.checkandgetuser = this.checkandgetuser.bind(this);
+    this.showpass = this.showpass.bind(this);
   }
 
   click() {
@@ -36,6 +37,15 @@ class Account extends Component {
     });
   }
 
+  showpass() {
+    let x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
   checkandgetuser(email, pass) {
     axios
       .post("http://localhost:3001/api/login", { email, pass })
@@ -52,7 +62,12 @@ class Account extends Component {
         <p>Email:</p>
         <input onChange={e => this.setusere(e.target.value)} />
         <p>Password:</p>
-        <input onChange={e => this.setpass(e.target.value)} />
+        <input
+          onChange={e => this.setpass(e.target.value)}
+          type="password"
+          id="myInput"
+        />
+        <button onclick={() => this.showpass()}>show pass </button>
         <div>
           <button
             onClick={() =>
