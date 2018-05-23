@@ -1,3 +1,9 @@
 .Home {
   height: 92vh;
 }
+.homebutton {
+  color: green;
+  width: 105px;
+  height: 105px;
+  margin: 10%;
+}
