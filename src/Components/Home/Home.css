@@ -3,7 +3,8 @@
 }
 .homebutton {
   color: green;
-  width: 105px;
+  width: 205px;
   height: 105px;
   margin: 10%;
+  border-radius: 15px;
 }
