@@ -23,7 +23,7 @@ class Home extends Component {
           </p>
           <p>With easy methods to get you motavated </p>
           <ul>
-            <li>Colors!!!</li>
+            <li className="red">Colors!!!</li>
             <li>Messages</li>
             <li>and more </li>
           </ul>
