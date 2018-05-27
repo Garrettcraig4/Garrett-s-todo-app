@@ -68,7 +68,7 @@ class Account extends Component {
           id="myInput"
         />
         <button onclick={() => this.showpass()}>show pass </button>
-        <div>
+        <div className="accbuttons">
           <button
             onClick={() =>
               this.checkandgetuser(this.state.email, this.state.pass)
