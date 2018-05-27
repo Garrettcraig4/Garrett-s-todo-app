@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h1>Garrett's Todo List Maker</h1>
+        <h1 className="title">Garrett's Todo List Maker</h1>
 
         <Link to="/Creator">
           <button className="homebutton">Create A Todo List</button>
