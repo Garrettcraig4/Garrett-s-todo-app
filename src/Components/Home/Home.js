@@ -21,7 +21,7 @@ class Home extends Component {
             With Garrett's Todo List Creator it's easy to get the things you
             need to do complete.
           </p>
-          <p>With easy methods to get you motavated </p>
+          <h1>With easy methods to get you motavated </h1>
           <ul>
             <li className="red">Colors!!!</li>
             <li>Messages</li>
